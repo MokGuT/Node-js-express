@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 
 const app = express();
-const port = 3000;
+const PORT = process.env.PORT || 4000;
 
 app.use(express.static(path.join(__dirname, "/public/"))); // ? เป็นการบอกว่า Path ของ HTML, CSS, JS เราอยู่ที่โฟลเดอร์อะไร
 
@@ -11,6 +11,6 @@ app.get("/", (req, res) => {
    res.send('Hello born to dev');
 });
 
-app.listen(port, () => {
-   console.log('Listening on port ', port);
+app.listen(PORT, () => {
+   console.log('Listening on PORT ', PORT);
 });
