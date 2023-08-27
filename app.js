@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const productRouter = express.Router();
 
 const app = express();
 const PORT = process.env.PORT || 4000;
@@ -8,6 +9,12 @@ app.use(express.static(path.join(__dirname, "/public/"))); // ? เป็นก�
 
 app.set("views", "./src/views");
 app.set("view engine", "ejs");
+
+productRouter.route("/").get((req, res) => {
+   res.send('Hello World I am Product');
+});
+
+app.use("/products", productRouter);
 
 // ? เอาไว้จัดการกับ Request ที่เข้ามาตรง ๆ ผ่านหน้านี้จะส่งข้อมูลอะไรกลับไป
 app.get("/", (req, res) => {
