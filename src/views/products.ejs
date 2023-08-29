@@ -43,6 +43,16 @@
    <link rel="stylesheet" href="assets/css/animate.css" />
    <link rel="stylesheet" href="assets/css/lineicons.css" />
    <link rel="stylesheet" href="assets/css/ud-styles.css" />
+
+   <style>
+      .ud-hero {
+         background: aliceblue;
+         padding-bottom: 180px;
+      }
+      .ud-header {
+         background: blueviolet;
+      }
+   </style>
 </head>
 
 <body>
@@ -139,7 +149,7 @@
       <div class="container">
          <h1>Hello World</h1>
          <% products.map((product) => { %>
-            <h4><%=product.productTitle %></h4>
+            <h4><a href="/products/<%=product.id %>"><%=product.productTitle %></a></h4>
             <p><%=product.productDes%></p>
             <p>ราคา: <%=product.productPrice%>. บาท</p>
          <% }) %>

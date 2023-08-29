@@ -1,24 +1,34 @@
 {
    "products": [
       {
+         "id": 0,
          "productTitle": "น้ำยาล้างจาน",
          "productDes": "น้ำยาล้างจานสูตร 1",
          "productPrice": 45
       },
       {
+         "id": 1,
          "productTitle": "น้ำยาล้างจาน 2",
          "productDes": "น้ำยาล้างจานสูตร 2",
          "productPrice": 50
       },
       {
+         "id": 2,
          "productTitle": "น้ำยาล้างจาน 3",
          "productDes": "น้ำยาล้างจานสูตร 3",
          "productPrice": 55
       },
       {
+         "id": 3,
          "productTitle": "น้ำยาล้างจาน 4",
          "productDes": "น้ำยาล้างจานสูตร 4",
          "productPrice": 60
+      },
+      {
+         "id": 4,
+         "productTitle": "น้ำยาล้างจาน 5",
+         "productDes": "น้ำยาล้างจานสูตร 5",
+         "productPrice": 70
       }
    ]
 }
