@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const products = require('./data/product.json');
+const { request } = require('http');
 const productRouter = express.Router();
 
 const app = express();
@@ -12,7 +13,16 @@ app.set("views", "./src/views");
 app.set("view engine", "ejs");
 
 productRouter.route("/").get((req, res) => {
-   res.render("products", products)
+   res.render("products", {
+      products,
+   })
+});
+
+productRouter.route("/:id").get((req, res) => {
+   const id = req.params.id;
+   res.render("product", {
+         product: products[id],
+      }) // ! Parameter ตัวแรกเป็นชื่อของไฟล์ EJS ที่เราต้องการส่งข้อมูลไปให้ และ Parameter      ตัวที่สองเป็นข้อมูลที่เราโยนเข้าไปในไฟล์นั้น ๆ
 });
 
 app.use("/products", productRouter);
